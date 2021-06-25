@@ -1,0 +1,103 @@
+[
+  {
+    "id": "6f7d78af.2dad18",
+    "type": "tab",
+    "label": "フロー 1",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "f0a0d64b.d30568",
+    "type": "inject",
+    "z": "6f7d78af.2dad18",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 292.5,
+    "y": 144,
+    "wires": [
+      [
+        "b1e91e83.4d1de"
+      ]
+    ]
+  },
+  {
+    "id": "b1e91e83.4d1de",
+    "type": "obniz-function",
+    "z": "6f7d78af.2dad18",
+    "obniz": "c6fd0be4.58ae08",
+    "name": "LED ON",
+    "code": "obnizParts.led.on();",
+    "x": 595.5,
+    "y": 143,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "408a2d2f.f8b624",
+    "type": "inject",
+    "z": "6f7d78af.2dad18",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 301,
+    "y": 239,
+    "wires": [
+      [
+        "da95c799.b997d8"
+      ]
+    ]
+  },
+  {
+    "id": "da95c799.b997d8",
+    "type": "obniz-function",
+    "z": "6f7d78af.2dad18",
+    "obniz": "c6fd0be4.58ae08",
+    "name": "LED OFF",
+    "code": "obnizParts.led.off();",
+    "x": 597,
+    "y": 237,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c6fd0be4.58ae08",
+    "type": "obniz",
+    "z": "",
+    "obnizId": "",
+    "deviceType": "obnizboard1y",
+    "name": "MyBoard",
+    "accessToken": "",
+    "code": "obnizParts.led = obniz.wired(\"LED\", {anode:0, cathode:1});\n"
+  }
+]
