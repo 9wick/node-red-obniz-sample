@@ -14,5 +14,7 @@ obnizBoard もしくは obnizBoard 1Yをセットアップし、wifiにつなげ
 ## フローの実行方法
 
 1.「LED ON」ノード内の設定よりobnizIDを指定してください
+
 2. デプロイを行い、nodeの下の `connecting...` が `connected` に変わるのを確認下さい
+
 3. Injectノードを押すとLEDが点灯／消灯します
